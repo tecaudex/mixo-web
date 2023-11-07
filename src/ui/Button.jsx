@@ -4,7 +4,7 @@ import React from "react";
 const Button = ({ title, icon: Icon, iconPosition, classNames }) => {
   return (
     <button
-      className={`bg-primary text-white px-3 py-2 rounded-md ml-3 min-w-[150px] flex gap-2 justify-center ${classNames}`}
+      className={`px-3 py-2 rounded-md ml-3 min-w-[150px] flex gap-2 justify-center ${classNames}`}
     >
       {Icon && iconPosition === "left" && <Icon className="mt-1" />}
       {title}
@@ -14,15 +14,16 @@ const Button = ({ title, icon: Icon, iconPosition, classNames }) => {
 };
 
 Button.propTypes = {
-  title: PropTypes.string,
   icon: React.ReactNode,
-  iconPosition: PropTypes.string,
+  title: PropTypes.string,
   classNames: PropTypes.string,
+  iconPosition: PropTypes.string,
 };
 
 Button.defaultProps = {
   title: "Button",
   iconPosition: "left",
+  classNames: "bg-primary text-white ",
 };
 
 export default Button;
