@@ -3,10 +3,11 @@ import UserCard from "./UserCard";
 import NewUserModal from "./NewUserModal";
 import userData from "../../mock/user_data.json";
 import ButtonGroup from "../ui/ButtonGroup";
-import { FaBeer } from "react-icons/fa";
 import { Button, Input } from "../ui";
+import { useNavigate } from "react-router-dom";
 
 function UsersList() {
+  const navigate = useNavigate();
   const [users, setUsers] = useState(userData);
   const [userModal, setUserModal] = useState({
     open: false,
@@ -80,7 +81,11 @@ function UsersList() {
         return user.name.toLowerCase().includes(searchTerm.toLowerCase());
       })
       .sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1))
-      .map((user) => <UserCard {...user} key={user.id} onView={onView} />);
+      .map((user) => (
+        <div key={user.id} onClick={() => navigate(`idea/${user.id}`)}>
+          <UserCard {...user} onView={onView} />
+        </div>
+      ));
   }, [users, searchTerm]);
 
   return (
@@ -104,13 +109,9 @@ function UsersList() {
         <div className="flex justify-between items-center mb-5 pb-2 border-b border-b-primary">
           <h1 className="text-3xl font-bold ">Scheduled</h1>
 
-          <div
-            className="
-            flex items-center justify-center flex-6
-          "
-          >
+          <div className="flex items-center justify-center flex-6 gap-4">
             <Input type="text" placeholder="Search" handleInput={handleInput} />
-            <Button title="Add New" icon={FaBeer} />
+            <Button title="Add New" />
           </div>
         </div>
 

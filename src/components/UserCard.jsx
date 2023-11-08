@@ -1,15 +1,8 @@
 import Avatar, { genConfig } from "react-nice-avatar";
 import PropTypes from "prop-types";
+import FormatDate from "../ui/FormatDate";
 
-UserCard.propTypes = {
-  id: PropTypes.string,
-  name: PropTypes.string,
-  job_title: PropTypes.string,
-  sex: PropTypes.string,
-  onView: PropTypes.func,
-};
-
-function UserCard({ id, name, job_title, sex, onView }) {
+function UserCard({ id, name, job_title, sex, comment, date, onView }) {
   const config = genConfig({
     // @ts-ignore
     sex: sex,
@@ -33,10 +26,22 @@ function UserCard({ id, name, job_title, sex, onView }) {
         <div className="">
           <h2 className="text-2xl capitalize font-semibold ">{name}</h2>
           <p className="text-sm text-gray-600">{job_title}</p>
+          {date && <FormatDate date={date} />}
+          <p className="font-bold ml-2">{comment}</p>
         </div>
       </div>
     </div>
   );
 }
+
+UserCard.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  job_title: PropTypes.string,
+  sex: PropTypes.string,
+  comment: PropTypes.string,
+  date: PropTypes.string,
+  onView: PropTypes.func,
+};
 
 export default UserCard;

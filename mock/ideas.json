@@ -3,60 +3,70 @@
     "id": 1234,
     "title": "Title of idea",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-    "createdAt":"1/15/12",
+    "createdAt":"11/01/23",
     "user":{
       "name": "tinypanda866",  
       "votes": 24
     },
     "comments" : [
       {
+          "id":1,
           "img": "http://dummyimage.com/185x100.png/5fa2dd/ffffff",
-          "createdAt": "1/11/12",
+          "createdAt": "11/01/23",
           "comment": "Great idea, thanks"
       },
       {
+          "id":2,
           "img": "http://dummyimage.com/209x100.png/dddddd/000000",
-          "createdAt": "1/12/12",
+          "createdAt": "11/01/23",
           "comment": "Nice work!"
       },
       {
+          "id":3,
           "img": "http://dummyimage.com/139x100.png/ff4444/ffffff",
-          "createdAt": "1/13/12",
+          "createdAt": "11/02/23",
           "comment": "Impressive!"
       },
       {
+          "id":4,
           "img": "http://dummyimage.com/207x100.png/dddddd/000000",
-          "createdAt": "1/14/12",
+          "createdAt": "11/04/23",
           "comment": "Well done!"
       },
       {
+          "id":5,
           "img": "http://dummyimage.com/159x100.png/dddddd/000000",
-          "createdAt": "1/15/12",
+          "createdAt": "11/04/23",
           "comment": "Fantastic job!"
       },
       {
+          "id":6,
           "img": "http://dummyimage.com/227x100.png/ff4444/ffffff",
-          "createdAt": "1/16/12",
+          "createdAt": "11/04/23",
           "comment": "You're amazing!"
       },
       {
+          "id":7,
           "img": "http://dummyimage.com/128x100.png/cc0000/ffffff",
-          "createdAt": "1/17/12",
+          "createdAt": "11/04/23",
           "comment": "Outstanding!"
       },
       {
+          "id":8,
           "img": "http://dummyimage.com/176x100.png/5fa2dd/ffffff",
-          "createdAt": "1/18/12",
+          "createdAt": "11/04/23",
           "comment": "Brilliant work!"
       },
       {
+          "id":9,
           "img": "http://dummyimage.com/206x100.png/ff4444/ffffff",
-          "createdAt": "1/19/12",
+          "createdAt": "11/04/23",
           "comment": "You're a genius!"
       },
       {
+          "id":10,
           "img": "http://dummyimage.com/224x100.png/ff4444/ffffff",
-          "createdAt": "1/20/12",
+          "createdAt": "11/04/23",
           "comment": "Top-notch!"
       }
     ]
