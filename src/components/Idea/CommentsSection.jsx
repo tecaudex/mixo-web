@@ -8,8 +8,11 @@ const CommentsSection = ({ comments }) => {
   const renderComments = comments?.map((comment) => (
     <UserCard
       key={comment.id}
-      comment={comment.comment}
-      date={comment.createdAt}
+      // comment={comment.comment}
+      // date={comment.createdAt}
+      // commentLiked={comment.liked}
+      // likedBy={comment.likedBy}
+      {...comment}
     />
   ));
 
@@ -17,7 +20,7 @@ const CommentsSection = ({ comments }) => {
     <div>
       <div className="flex flex-col sm:flex-row sm:justify-between mt-5 gap-4">
         <p className="text-3xl font-bold">
-          Comments{" "}
+          Comments
           <span className="font-normal">({comments?.length || 0})</span>
         </p>
         <Button title="New Comment" variant="primary" icon={PiPlusBold} />

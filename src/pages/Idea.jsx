@@ -18,8 +18,12 @@ const Idea = () => {
 
   return (
     <div className="flex flex-col gap-10 md:gap-14">
-      <IdeaSection idea={idea} />
-      <CommentsSection comments={idea?.comments} />
+      {idea && (
+        <>
+          <IdeaSection idea={idea} />
+          <CommentsSection comments={idea?.comments} />
+        </>
+      )}
     </div>
   );
 };
