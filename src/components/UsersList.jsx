@@ -82,7 +82,11 @@ function UsersList() {
       })
       .sort((a, b) => (a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1))
       .map((user) => (
-        <div key={user.id} onClick={() => navigate(`idea/${user.id}`)}>
+        <div
+          key={user.id}
+          // onClick={() => navigate(`idea/${user.id}`)}
+          onClick={() => navigate(`idea/1234`)}
+        >
           <UserCard {...user} onView={onView} />
         </div>
       ));
